@@ -9,4 +9,28 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --cover-image: url('../images/cover-image-light.png');
+  --color-cover-image: #FFC2E6;
+  --color-text: #353430;
+  --color-accent: #FFC2E6;
+  --color-background: #FF8DCB;
+  --color-text-list: #353430;
+  --color-text-list-title: #353430;
+  --color-button: rgb(53, 52, 48, 0.5);
+  --rec-display: none;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --cover-image: url('../images/cover-image-light.png');
+    --color-cover-image: #FFC2E6;
+    --color-text: #353430;
+    --color-accent: #FFC2E6;
+    --color-background: #FF8DCB;
+    --color-text-list: #353430;
+    --color-text-list-title: #353430;
+    --color-button: rgb(53, 52, 48, 0.5);
+    --rec-display: none;
+  }
+}
+
