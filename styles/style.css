@@ -20,7 +20,7 @@ h2,
 h3,
 p {
   font-size: 18px;
-  line-height: 23px;
+  line-height: 23.4px;
 }
 
 h2 {
@@ -238,7 +238,7 @@ main {
 }
 
 .main_title.section_gallery {
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 10px;
 }
 
