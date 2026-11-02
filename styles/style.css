@@ -210,7 +210,6 @@ main {
 .card_list.concentration {
   display: grid;
   grid-auto-flow: row;
-  gap: 20px;
 }
 
 .main_content.section_recommendation {
@@ -386,9 +385,12 @@ main {
   }
 
   .main_content.section_focus,
-  .main_content.section_recommendation,
-  .card_list.concentration {
+  .main_content.section_recommendation {
     grid-auto-flow: column;
+  }
+
+  .card_list.concentration {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   h2 {
