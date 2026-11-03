@@ -16,18 +16,20 @@
   font-family: "IBM Plex Mono", sans-serif;
 }
 
-h2,
+.chapter_heading,
 h3,
+h4,
 p {
   font-size: 18px;
   line-height: 23.4px;
 }
 
-h2 {
+.chapter_heading {
   color: var(--color-text);
 }
 
-h3 {
+h3,
+h4 {
   color: var(--color-text-list-title);
   background-color: var(--color-background);
 }
@@ -37,12 +39,16 @@ p {
   margin-top: 10px;
 }
 
-h1 {
+h1,
+.footer_accent_name {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
   color: var(--color-accent);
-  text-shadow: 4px 4px 0 var(--color-background);
   line-height: 82%;
+}
+
+h1 {
+  text-shadow: 4px 4px 0 var(--color-background);
 }
 
 .plain_text {
@@ -118,9 +124,8 @@ h1 {
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+  padding-bottom: 1px;
 }
 
 .header__theme-menu-button_active {
@@ -200,7 +205,8 @@ main {
   gap: 20px;
 }
 
-.main_content.section_concentration {
+.main_content.section_concentration,
+.main_content.section_recommendation {
   display: grid;
   grid-auto-flow: row;
   margin-top: 50px;
@@ -212,11 +218,8 @@ main {
   grid-auto-flow: row;
 }
 
-.main_content.section_recommendation {
-  display: grid;
-  grid-auto-flow: row;
-  gap: 20px;
-  margin-top: 50px;
+.main_title.section {
+  margin-bottom: 20px;
 }
 
 .text_link {
@@ -226,9 +229,8 @@ main {
 
 .text_link:hover {
   outline: none;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: var(--color-text-list);
+  border-bottom: 1px solid var(--color-text-list);
+  padding-bottom: 1px;
 }
 
 .text_link:focus-visible {
@@ -253,6 +255,7 @@ main {
   position: relative;
   width: 100%;
   min-height: 0;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -268,18 +271,18 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
   height: 100vh;
   margin-top: 40px;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--color-accent);
-  text-shadow: 2px 2px 0 var(--color-background);
   min-height: 668px;
+}
+
+.footer_accent_name {
+  text-shadow: 2px 2px 0 var(--color-background);
 }
 
 @media (min-width: 768px) {
   h1,
-  .footer {
+  .footer_accent_name {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -361,7 +364,7 @@ main {
     margin-top: 80px;
   }
 
-  h2 {
+  .chapter_heading {
     max-width: 236px;
   }
 }
@@ -384,16 +387,11 @@ main {
     margin-top: 114px;
   }
 
-  .main_content.section_focus,
-  .main_content.section_recommendation {
-    grid-auto-flow: column;
-  }
-
   .card_list.concentration {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  h2 {
+  .chapter_heading {
     max-width: 315px;
   }
 }
